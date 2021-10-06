@@ -11,10 +11,8 @@
             "address", 
             "mainPhone",
             "description", 
-            "hours",
             "photoGallery",
-            "slug",
-            "geocodedCoordinate"
+            "slug"
         ], 
         "filter" : {
             "entityTypes": [
@@ -36,9 +34,12 @@
     <body>      
         <div class="w-full">
             {{>nav}}
-            <div class="centered-container">
+            <div class="centered-container grid gap-y-5">
+                <div class="section">{{>department-core-information}}</div>
+                <div class="section">{{>department-relatedStories}}</div>
             </div>
-            <div class="w-full bg-gray-100">
+            <div class="section">{{>department-whatNext}}</div>
+            <div class="w-full bg-ach-blue">
                 <div class="centered-container">
                     {{>footer}}
                 </div>
