@@ -1,0 +1,44 @@
+<div class="grid gap-y-5">
+    
+    <div class="text-center grid gap-y-3">
+        <h1>{{c_shortName}}</h1>
+        <div>
+        Departments related to this location: 
+        </div>
+    </div>
+
+    <div class='md:grid grid-cols-3'>
+        <div class="column-1">
+            <img
+                class=""
+                src={{dynamicImage photoGallery.[0].image.url "1000x1000" true}}
+                alt="{{image.alternateText}}"
+                width="600"
+                height="400"
+            />
+        </div>
+        <div class="column-2">
+            <div class="address">
+                <div>{{address.line1}}</div>
+                <div>{{address.extraDescription}}</div>       
+                <div>{{address.line2}}</div>       
+                <div>{{address.city}}, {{address.region}} {{address.postalCode}}</div>
+                <div>Fax: {{phoneNumber "US" fax "NATIONAL"}}</div>
+            </div>
+            <div class="view-map">
+                <a class="hover:underline" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">View a map</a>
+            </div>
+            <div class="phone-number">
+                <div class="btn">
+                    Fax: {{phoneNumber "US" fax "NATIONAL"}}
+                </div>
+            </div>
+        </div>
+        <div class="column-3">
+            <h3>Park at Bowery Deck Parking Lot</h3>
+            <div>199 W. Bowery St.</div>
+            <div>{{address.city}}, {{address.region}} {{address.postalCode}}</div>       
+            <div></div>   
+        </div>
+    </div>
+</div>

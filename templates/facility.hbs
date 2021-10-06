@@ -1,0 +1,59 @@
+---
+{
+    "stream": {
+        "$id": "location",
+        "source": "knowledgeGraph",
+        "destination": "pages",
+        "fields": [
+            "id", 
+            "uid", 
+            "name", 
+            "address", 
+            "mainPhone",
+            "fax",
+            "logo",
+            "photoGallery",
+            "slug",
+            "c_shortName",
+            "c_relatedProfessionals.name",
+            "c_relatedProfessionals.firstName",
+            "c_relatedProfessionals.lastName",
+            "c_relatedProfessionals.degrees",
+            "c_relatedProfessionals.c_providerListCategory",
+            "c_relatedProfessionals.c_providerTitle",
+            "c_relatedProfessionals.acceptingNewPatients",
+            "c_relatedProfessionals.headshot",
+            "c_relatedProfessionals.slug"
+        ], 
+        "filter" : {
+            "savedFilterIds": [
+                "674556459"
+            ]
+        }
+    },
+    "urlFormat": "{{slug}}"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{>head }}
+        <title>{{name}}</title>
+        {{>schema}}
+        <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png"/>
+    </head>
+    <body>      
+        <div class="w-full">
+            {{>nav}}
+            <div class="centered-container grid gap-y-5">
+                {{>facility-core-information}}
+                {{>facility-relatedProfessionals}}
+            </div>
+            <div class="w-full bg-gray-100">
+                <div class="centered-container">
+                    {{>footer}}
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>
