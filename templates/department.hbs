@@ -12,7 +12,19 @@
             "mainPhone",
             "description", 
             "photoGallery",
-            "slug"
+            "slug",
+            "c_relatedArticles.name",
+            "c_relatedArticles.landingPageUrl",
+            "c_relatedArticles.photoGallery",
+            "c_relatedProfessionals.name",
+            "c_relatedProfessionals.firstName",
+            "c_relatedProfessionals.lastName",
+            "c_relatedProfessionals.degrees",
+            "c_relatedProfessionals.c_providerListCategory",
+            "c_relatedProfessionals.c_providerTitle",
+            "c_relatedProfessionals.acceptingNewPatients",
+            "c_relatedProfessionals.headshot",
+            "c_relatedProfessionals.slug"
         ], 
         "filter" : {
             "entityTypes": [
@@ -36,7 +48,9 @@
             {{>nav}}
             <div class="centered-container grid gap-y-5">
                 <div class="section">{{>department-core-information}}</div>
-                <div class="section">{{>department-relatedStories}}</div>
+                <div class="section">{{>department-locations}}</div>
+                <div class="section">{{>department-professionals}}</div>
+                <div class="section">{{>department-relatedStories c_relatedArticles}}</div>
             </div>
             <div class="section">{{>department-whatNext}}</div>
             <div class="w-full bg-ach-blue">

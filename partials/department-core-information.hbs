@@ -1,9 +1,20 @@
 <div class="grid gap-y-3">
     <div class="text-center">Includes specialty programs: </div>
-    <div class="">
-        <h1>{{name}}</h1>
-        <div>
-        
-        </div>
+    <div>
+        <img class="md:hidden" src={{dynamicImage photoGallery.[0].image.url "500x500" true}} width="720px" height="493px"/>
     </div>
+    <div class="grid grid-cols-2 md:hero h-96 bg-no-repeat bg-cover relative" style="background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 60%), url({{photoGallery.[0].image.url}});">
+        
+        <div class="grid gap-y-6">
+            <h1>{{name}}</h1>
+            <div>
+                {{description}}
+            </div>
+            <div>
+                <span class="border px-4 py-4 rounded-lg bg-ach-blue text-white hover:bg-ach-hover-blue">REQUEST AN APPOINTMENT</span>
+                <span class="border px-4 py-4 rounded-lg bg-ach-dark-gray text-white hover:bg-ach-blue">REFER A PATIENT</span>
+            </div>
+        </div>  
+    </div>
+
 </div>

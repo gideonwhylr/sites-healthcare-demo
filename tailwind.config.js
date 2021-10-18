@@ -29,11 +29,12 @@ module.exports = {
     extend: {
       colors: {
         "ach-blue": "#004590",
-        "ach-hover-blue": "#23527c",
+        "ach-hover-blue": "#002d5d",
         "ach-font-blue": "#004590",
         "ach-green": "green",
         "ach-light-green": "#339933",
         "ach-gray": "#ECECEC",
+        "ach-dark-gray": "#999999",
         "ach-orange": "#ff9900",
         "ach-yellow": "#ffb738"
       },

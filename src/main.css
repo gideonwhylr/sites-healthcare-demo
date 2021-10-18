@@ -22,6 +22,10 @@
   @apply flex justify-center bg-white rounded-xl py-8 text-center text-xl text-ach-font-blue;
 }
 
+.hero {
+  background-position: center;
+}
+
 /* Body Styling */
 
 body {
