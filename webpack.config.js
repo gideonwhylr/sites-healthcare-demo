@@ -5,7 +5,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   plugins: [new MiniCssExtractPlugin()],
   entry: {
-    main: "./src/main.js"
+    main: "./src/main.js",
+    map: "./src/map.ts"
   },
   output: {
     filename: "[name].js",
