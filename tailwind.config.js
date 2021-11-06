@@ -30,6 +30,7 @@ module.exports = {
       colors: {
         "ach-blue": "#004590",
         "ach-hover-blue": "#002d5d",
+        "ach-a-hover": "#3386e1",
         "ach-font-blue": "#004590",
         "ach-green": "green",
         "ach-light-green": "#339933",

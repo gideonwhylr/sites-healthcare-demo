@@ -1,8 +1,21 @@
-<div>
-    <div class="text-center">
-        <h2>Locations</h2>
+<div class="text-center">
+    <h2>Locations</h2>
+    <div class="mt-5 grid grid-cols-2 px-3 space-x-10">
         {{#each this}}
-            {{!-- {{name}} --}}
+            <div class="grid grid-cols-2 gap-x-5">
+                <img class="" src="{{dynamicImage this.photoGallery.[0].image.url "200x200" true}}" width="300" height="300">
+
+                <div class="text-left">
+                    <div class="text-ach-blue hover:text-ach-a-hover"><a href="{{websiteUrl.url}}">{{c_shortName}}</a></div>
+                    <div class="">{{name}}</div>
+                    <div class="">{{address.line1}}, {{address.line2}}</div>
+                    <div class="">{{address.city}}, {{address.region}} {{address.postalCode}}</div>
+                    <div class="mt-2 space-y-2">
+                        <a href="https://www.google.com/maps/place/{{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}"><div class="border border-gray-300 rounded-xl text-center py-2 text-ach-blue bg-ach-gray hover:bg-ach-blue hover:text-white">&#128241; Map & Directions</div></a>
+                        <div class="border border-gray-300 rounded-xl text-center py-2 text-ach-blue bg-ach-gray hover:bg-ach-blue hover:text-white">{{phoneNumber "US" mainPhone "NATIONAL"}}</div>
+                    </div>
+                </div>
+            </div>
         {{/each}}
     </div>
 </div>

@@ -13,6 +13,12 @@
             "description", 
             "photoGallery",
             "slug",
+            "c_relatedFacility.name",
+            "c_relatedFacility.c_shortName",
+            "c_relatedFacility.address",
+            "c_relatedFacility.mainPhone",
+            "c_relatedFacility.websiteUrl",
+            "c_relatedFacility.photoGallery",
             "c_relatedArticles.name",
             "c_relatedArticles.landingPageUrl",
             "c_relatedArticles.photoGallery",
@@ -48,7 +54,7 @@
             {{>nav}}
             <div class="centered-container grid gap-y-5">
                 <div class="section">{{>department-core-information}}</div>
-                <div class="section">{{>department-locations}}</div>
+                <div class="section">{{>department-locations c_relatedFacility}}</div>
                 <div class="section">{{>department-professionals}}</div>
                 <div class="section">{{>department-relatedStories c_relatedArticles}}</div>
             </div>

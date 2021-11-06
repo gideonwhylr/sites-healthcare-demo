@@ -1,8 +1,13 @@
 <div>
     <div class="text-center">
         <h2>Related Stories</h2>
-        {{#each this}}
-            {{name}}
-        {{/each}}
+        <div class="mt-5 grid grid-cols-3 space-x-5">
+            {{#each this}}
+                <div class="text-left space-y-5">
+                    <img src="{{dynamicImage this.photoGallery.[0].image.url "500x500" true}}" width="200" height="200"/>
+                    <div class="pr-10"><a href="{{landingPageUrl}}" class="text-ach-blue hover:text-ach-a-hover">{{name}}</a></div>
+                </div>
+            {{/each}}
+        </div>
     </div>
 </div>

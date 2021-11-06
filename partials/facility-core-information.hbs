@@ -1,13 +1,13 @@
 <div class="grid gap-y-5">
     
-    <div class="text-center grid gap-y-3">
-        <h1>{{c_shortName}}</h1>
+    <div class="text-center grid gap-y-3 text-ach-dark-gray">
+        <h1 class="mt-3">{{c_shortName}}</h1>
         <div>
-        Departments related to this location: 
+        Departments related to this location: <span class="text-ach-blue hover:text-ach-a-hover"><a href="{{c_relatedDepartments.[0].landingPageUrl}}">{{c_relatedDepartments.[0].name}}</a></span>
         </div>
     </div>
 
-    <div class='md:grid grid-cols-3'>
+    <div class='md:grid grid-cols-3 gap-x-6'>
         <div class="column-1">
             <img
                 class=""
@@ -26,11 +26,11 @@
                 <div>Fax: {{phoneNumber "US" fax "NATIONAL"}}</div>
             </div>
             <div class="view-map">
-                <a class="hover:underline" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">View a map</a>
+                <a class="text-ach-blue hover:underline hover:text-ach-a-hover" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank"> View a map</a>
             </div>
-            <div class="phone-number">
-                <div class="btn">
-                    Fax: {{phoneNumber "US" fax "NATIONAL"}}
+            <div class="phone-number mt-2">
+                <div class="btn rounded-lg border border-gray-300 bg-ach-gray hover:bg-ach-blue hover:text-white">
+                    &#128241; {{phoneNumber "US" mainPhone "NATIONAL"}}
                 </div>
             </div>
         </div>
@@ -38,7 +38,9 @@
             <h3>Park at Bowery Deck Parking Lot</h3>
             <div>199 W. Bowery St.</div>
             <div>{{address.city}}, {{address.region}} {{address.postalCode}}</div>       
-            <div></div>   
+            <div>
+                <a class="text-ach-blue hover:underline hover:text-ach-a-hover" href="https://www.akronchildrens.org/parking/Bowery-Deck.html" target="_blank">Parking Info & Map</a>
+            </div>   
         </div>
     </div>
 </div>
