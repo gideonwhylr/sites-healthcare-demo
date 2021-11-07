@@ -14,7 +14,18 @@
             "hours",
             "photoGallery",
             "slug",
-            "geocodedCoordinate"
+            "acceptingNewPatients",
+            "c_providerTitle",
+            "geocodedCoordinate",
+            "c_relatedFacility.name",
+            "c_relatedFacility.c_shortName",
+            "c_relatedFacility.address",
+            "c_relatedFacility.mainPhone",
+            "c_relatedFacility.websiteUrl",
+            "c_relatedFacility.photoGallery",
+            "c_relatedDepartments.name",
+            "c_relatedDepartments.landingPageUrl",
+            "c_relatedDepartments.slug"
         ], 
         "filter" : {
             "entityTypes": [
@@ -36,9 +47,12 @@
     <body>      
         <div class="w-full">
             {{>nav}}
-            <div class="centered-container">
+            <div class="centered-container grid gap-y-5">
+                <div class="section">{{>professional-core-information}}</div>
+                <div class="section">{{>locations c_relatedFacility}}</div>
             </div>
-            <div class="w-full bg-gray-100">
+            <div class="section mb-0">{{>department-whatNext}}</div>
+            <div class="w-full bg-ach-blue">
                 <div class="centered-container">
                     {{>footer}}
                 </div>

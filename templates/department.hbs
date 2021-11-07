@@ -19,6 +19,7 @@
             "c_relatedFacility.mainPhone",
             "c_relatedFacility.websiteUrl",
             "c_relatedFacility.photoGallery",
+            "c_relatedFacility.slug",
             "c_relatedArticles.name",
             "c_relatedArticles.landingPageUrl",
             "c_relatedArticles.photoGallery",
@@ -54,11 +55,11 @@
             {{>nav}}
             <div class="centered-container grid gap-y-5">
                 <div class="section">{{>department-core-information}}</div>
-                <div class="section">{{>department-locations c_relatedFacility}}</div>
+                <div class="section">{{>locations c_relatedFacility}}</div>
                 <div class="section">{{>department-professionals}}</div>
                 <div class="section">{{>department-relatedStories c_relatedArticles}}</div>
             </div>
-            <div class="section">{{>department-whatNext}}</div>
+            <div class="section mb-0">{{>department-whatNext}}</div>
             <div class="w-full bg-ach-blue">
                 <div class="centered-container">
                     {{>footer}}

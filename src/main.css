@@ -28,6 +28,10 @@
 
 /* Body Styling */
 
+.ach-link {
+  @apply text-ach-blue hover:text-ach-a-hover hover:cursor-pointer;
+}
+
 body {
   @apply bg-white;
 }
